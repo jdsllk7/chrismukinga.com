@@ -121,7 +121,8 @@
 							Download Now!
 						</a> -->
 						<a onclick="var that=this;_gaq.push(['_trackEvent','Download','foo',this.href]);setTimeout(function(){location.href=that.href;},400);return false;"
-							href="assets/pdf/What Makes A Man Change - Christopher Mukinga.pdf" class="mu-primary-btn downloadBtn" download>
+							href="assets/pdf/What Makes A Man Change - Christopher Mukinga.pdf"
+							class="mu-primary-btn downloadBtn" download>
 							Download Now!
 						</a>
 						<span>*Available as eBook.</span>
@@ -495,9 +496,10 @@
 							<div class="mu-contact-content">
 
 								<div id="form-messages"></div>
-								<form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
+								<!-- <form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form"> -->
+								<form action="POST" data-netlify="true" class="mu-contact-form">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Name" id="name" name="name"
+										<input type="text" class="form-control" placeholder="Enter Name" id="name" name="name"
 											required>
 									</div>
 									<div class="form-group">
@@ -508,6 +510,11 @@
 										<textarea class="form-control" placeholder="Message" id="message" name="message"
 											required></textarea>
 									</div>
+
+									<div class="form-group">
+										<div data-netlify-recaptcha="true"></div>
+									</div>
+
 									<button type="submit" class="mu-send-msg-btn"><span>SUBMIT</span></button>
 								</form>
 
