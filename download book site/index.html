@@ -28,6 +28,25 @@
 	<!-- Lato for Title -->
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-XXXXX-Y', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
 </head>
 
 <body>
@@ -82,7 +101,7 @@
 
 				<div class="col-md-6 col-sm-6 col-sm-push-6">
 					<div class="mu-hero-right">
-						<img src="assets/images/book_no_bg.png" height="100%" width="100%" alt="Ebook img">
+						<img src="assets/images/book_no_bg_2.png" height="100%" width="100%" alt="Ebook img">
 					</div>
 				</div>
 
@@ -97,11 +116,15 @@
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam saepe, recusandae quidem
 							deserunt ipsum maxime aspernatur velit impedit.
 						</p>
-						<a href="assets/pdf/What Makes A Man Change - Christopher Mukinga.pdf" class="mu-primary-btn"
-							download>
+						<!-- <a href="assets/pdf/What Makes A Man Change - Christopher Mukinga.pdf"
+							class="mu-primary-btn downloadBtn" download>
+							Download Now!
+						</a> -->
+						<a onclick="var that=this;_gaq.push(['_trackEvent','Download','foo',this.href]);setTimeout(function(){location.href=that.href;},400);return false;"
+							href="assets/pdf/What Makes A Man Change - Christopher Mukinga.pdf" class="mu-primary-btn downloadBtn" download>
 							Download Now!
 						</a>
-						<span>*Available in PDF & Hard Copy.</span>
+						<span>*Available as eBook.</span>
 					</div>
 				</div>
 
@@ -126,17 +149,27 @@
 								<div class="row">
 
 									<!-- Start Single Counter -->
-									<div class="col-md-4 col-sm-6">
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-single-counter">
+											<i class="fa fa-download" aria-hidden="true"></i>
+											<div class="counter-value downloadCountDisplay">0</div>
+											<h5 class="mu-counter-name">Total Downloads</h5>
+										</div>
+									</div>
+									<!-- / Single Counter -->
+
+									<!-- Start Single Counter -->
+									<div class="col-md-3 col-sm-6">
 										<div class="mu-single-counter">
 											<i class="fa fa-files-o" aria-hidden="true"></i>
-											<div class="counter-value" data-count="650">0</div>
+											<div class="counter-value" data-count="100">0</div>
 											<h5 class="mu-counter-name">Total Pages</h5>
 										</div>
 									</div>
 									<!-- / Single Counter -->
 
 									<!-- Start Single Counter -->
-									<div class="col-md-4 col-sm-6">
+									<div class="col-md-3 col-sm-6">
 										<div class="mu-single-counter">
 											<i class="fa fa-file-text-o" aria-hidden="true"></i>
 											<div class="counter-value" data-count="422">0</div>
@@ -146,7 +179,7 @@
 									<!-- / Single Counter -->
 
 									<!-- Start Single Counter -->
-									<div class="col-md-4 col-sm-6">
+									<div class="col-md-3 col-sm-6">
 										<div class="mu-single-counter">
 											<i class="fa fa-users" aria-hidden="true"></i>
 											<div class="counter-value" data-count="1055">0</div>
@@ -303,12 +336,11 @@
 
 
 		<!-- Start Video Review -->
-		<section id="mu-video-review">
-			<div class="container">
+		<!-- <section id="mu-video-review">
+			<div class="container"> 
 				<div class="row">
 					<div class="col-md-12">
 						<div class="mu-video-review-area">
-
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title">Check Out Our Video Review</h2>
 								<span class="mu-header-dot"></span>
@@ -317,21 +349,19 @@
 									Ipsum has been the industry's standard dummy text ever
 								</p>
 							</div>
-
-							<!-- Start Video Review Content -->
 							<div class="mu-video-review-content">
 								<iframe class="mu-video-iframe" width="100%" height="480"
 									src="https://www.youtube.com/embed/T4ySAlBt2Ug" frameborder="0" allowfullscreen>
 								</iframe>
 							</div>
-							<!-- End Video Review Content -->
-
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- End Video Review -->
+
+
 
 		<!-- Start Author -->
 		<section id="mu-author">
@@ -369,10 +399,11 @@
 												alt="Author Signature">
 
 											<div class="mu-author-social">
-												<a href="https://www.instagram.com/chrismukinga/" target="_blank" title="Instagram">
+												<a href="https://www.instagram.com/chrismukinga/" target="_blank"
+													title="Instagram">
 													<i class="fa fa-instagram"></i>
 												</a>
-												<a href="https://www.facebook.com/christopher.mukinga.7/about" title="Facebook"
+												<a href="www.facebook.com/ChrisMukinga" title="Facebook"
 													target="_blank">
 													<i class="fa fa-facebook"></i>
 												</a>
@@ -504,8 +535,7 @@
 					<a href="https://www.instagram.com/chrismukinga/" target="_blank" title="Instagram">
 						<i class="fa fa-instagram"></i>
 					</a>
-					<a href="https://www.facebook.com/christopher.mukinga.7/about" title="Facebook"
-						target="_blank">
+					<a href="https://www.facebook.com/christopher.mukinga.7/about" title="Facebook" target="_blank">
 						<i class="fa fa-facebook"></i>
 					</a>
 					<a href="mailto:chrismukingaministries@gmail.com" title="Email">
@@ -517,12 +547,13 @@
 				<br>
 				<br>
 				<p class="mu-copyright">
-					&copy; Copyright <b><span>What Makes A Man Change</span></b>.
+					&copy; Copyright <b><span>Christopher Mukinga</span></b>.
 					<br>
 					<br>
-					 Designed by  <br>
+					Designed by <br>
 					<a target="_blank" class="no_loader" href="https://joshuakosamu.netlify.app">
-						<img style="width:70px;height:60px;" src="https://web-remote-resources.netlify.app/jdslk/jdslk_logo.png" alt="Jdslk">
+						<img style="width:70px;height:60px;"
+							src="https://web-remote-resources.netlify.app/jdslk/jdslk_logo.png" alt="Jdslk">
 					</a>
 				</p>
 			</div>
@@ -544,6 +575,7 @@
 	<script type="text/javascript" src="assets/js/counter.js"></script>
 	<!-- Ajax contact form  -->
 	<script type="text/javascript" src="assets/js/app.js"></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
 
 
 
